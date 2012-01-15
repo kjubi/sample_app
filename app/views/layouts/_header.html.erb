@@ -1,11 +1,12 @@
-
 <header>
 
-  <%= image_tag("logo.png", :alt => "Go2Cinema", :class => "round") %>
+  <% logoPath = image_tag("logo.png", :alt => "Go2Cinema", :class => "round") %>
+  <%= link_to logoPath, root_path %>
+
   <nav class="round">
   <ul>
-    <li><%= link_to "Home", '#' %></li>
-    <li><%= link_to "Help", '#'%></li>
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Help", help_path%></li>
     <li><%= link_to "Sign In", '#' %></li>
   </ul>
   
