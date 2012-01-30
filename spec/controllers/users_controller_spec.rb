@@ -86,9 +86,10 @@ describe UsersController do
  		end
  		
  		describe "success" do
- 			before (:each) do
-  				@attr = {:name => "Yurgen Stepov", :email => "estar@gmail.com", :password => "validpass", :password_confirmation => "validpass"}
- 			end
+		   before(:each) do
+		     @attr = { :name => "New User", :email => "user@example.com",
+		               :password => "foobar", :password_confirmation => "foobar" }
+		   end
  			
  			it "should create user" do
  				lambda do
@@ -97,12 +98,12 @@ describe UsersController do
 			end
 			
 			it "should redirect to user profile page" do
-				post :create, :user => :@attr
+				post :create, :user => @attr
 				response.should redirect_to(user_path(assigns(:user)))
 			end
 			
 			it "should contain welcome message" do
-				post :create, :user => :@attr
+				post :create, :user => @attr
 				flash[:success].should =~ /welcome to where to go!/i
 			end
 			

@@ -9,15 +9,14 @@ class UsersController < ApplicationController
 		@title = @user.name
 	end
 	
-	def create
-		@user = User.new(params[:user])
-		if (@user.save)
-			flash[:success] = "welcome to where to go!"
-			redirect_to user_path(@user)
-		else
-			@title = "Sign up page"			
-			render 'new'
-		end
-	end
-
+  def create
+    @user = User.new(params[:user])
+    if @user.save
+      flash[:success] = "welcome to where to go!"
+      redirect_to @user
+    else
+      @title = "Sign up"
+      render 'new'
+    end
+  end
 end
