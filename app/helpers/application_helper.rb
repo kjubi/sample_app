@@ -10,6 +10,6 @@ module ApplicationHelper
 	end
 	
 	def logo
-		image_tag("logo.png", :alt => "Go2Cinema", :class => "round")
+		image_tag("rails3logo.png", :alt => "Go2Cinema", :class => "round")
 	end
 end

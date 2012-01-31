@@ -3,7 +3,7 @@
 }
 
 body {
-	background: #cff;
+	background: #CFDEBF;
 }
 
 header {
@@ -13,6 +13,7 @@ header {
 header img {
 	padding: 1em;
 	background: #fff;
+	width: 50%;
 }
 
 footer {
